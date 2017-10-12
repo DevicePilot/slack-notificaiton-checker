@@ -4,9 +4,9 @@ const parseMessages = require('./src/parseMessages');
 const getDuplicates = require('./src/getDuplicates');
 const getOoos = require('./src/getOoos');
 
-const logFile = './logs/2017-10-11.json';
+const logFile = process.argv[2];
 const messages = getSlackMessages(logFile);
-console.info(`Log contains ${messages.length} DevicePilot notifications`);
+console.info(`${logFile} contains ${messages.length} DevicePilot notifications`);
 
 const parsed = parseMessages(messages);
 
