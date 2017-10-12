@@ -2,6 +2,7 @@
 const getSlackMessages = require('./src/getSlackMessages');
 const parseMessages = require('./src/parseMessages');
 const getDuplicates = require('./src/getDuplicates');
+const getOoos = require('./src/getOoos');
 
 const logFile = './logs/2017-10-11.json';
 const messages = getSlackMessages(logFile);
@@ -17,3 +18,10 @@ if (duplicates.length) {
   console.info('No duplicates found');
 }
 
+const ooos = getOoos(parsed);
+if (ooos.length) {
+  console.warn(`${ooos.length} out of order actions found:`);
+  console.warn(JSON.stringify(ooos));
+} else {
+  console.info('No out of order actions found');
+}
