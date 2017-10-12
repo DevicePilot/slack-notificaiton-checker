@@ -7,7 +7,7 @@ module.exports = {
     //  match: (= 1 by default), group index to return,
     //  none: (= undefined by default), value to return on no match
     // }
-    time: { regex: /Alert @(\d\d?\/\d\d?\/\d\d\d\d, \d\d?:\d\d?:\d\d? \w\w)/ },
+    time: { regex: /Alert Live but temporarily offline@(\d\d?\/\d\d?\/\d\d\d\d, \d\d?:\d\d?:\d\d? \w\w)/ },
     device: { regex: /Device: +\((\w*)\)/ },
     type: { regex: 'Event (Flagged|Cleared)' },
   },
