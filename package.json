@@ -1,0 +1,9 @@
+{
+  "name": "slack-notification-checker",
+  "version": "1.0.0",
+  "description": "Verify that DevicePilot notifications to a Slack channel do not contain duplicates or consecutive flagged/cleared messages.",
+  "main": "index.js",
+  "repository": "https://github.com/DevicePilot/slack-notification-chcker.git",
+  "author": "tom.wallace@devicepilot.com",
+  "license": "MIT"
+}
